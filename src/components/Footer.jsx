@@ -35,7 +35,7 @@ const Footer = () => {
                 <div>
                     <p className="font-bold text-primary">Resources</p>
                     <ul className="font-extralight py-3">
-                        <li>API</li>
+                        
                         <li>Blog</li>
                         <li>Reports</li>
                     </ul>
