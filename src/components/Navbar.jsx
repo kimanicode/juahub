@@ -1,16 +1,21 @@
 import React from "react";
-import {Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
+import {Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, NavbarContent, NavbarItem,  Button} from "@nextui-org/react";
+import { Link } from "react-router-dom"
 
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
+  const handleClick =() =>{
+    setIsMenuOpen(false)
+  }
+
   const menuItems = [
-    "Home",
-    "About Us",
-    "Services",
-    "Pricing",
-    "Contact Us",
+    { name: 'Home', route: '/' },
+    { name: 'Services', route: '/services' },
+    { name: 'Pricing', route: '/pricing' },
+    { name: 'About Us', route: '/about-us' },
+    { name: 'Contact Us', route: '/contact-us' }
     
   ];
 
@@ -30,39 +35,40 @@ export default function App() {
         <NavbarContent className="sm:hidden pr-3" justify="center">
             <NavbarBrand>
             
-            <p className="font-bold text-inherit text-primary">JuaHub</p>
+            <Link to='/'><p className="font-bold text-inherit text-primary">JuaHub</p></Link>
             </NavbarBrand>
         </NavbarContent>
     
         <NavbarContent className="hidden sm:flex gap-4" justify="end">
+            <Link to='/'> <p className="font-bold text-inherit text-primary">JuaHub</p>
+</Link>
             <NavbarBrand>
             
-            <p className="font-bold text-inherit text-primary">JuaHub</p>
             </NavbarBrand>
         
                 <NavbarItem>
-                <Link color="foreground" href="#">
+                <Link color="foreground" href="#" to='/'>
                     Home
                 </Link>
                 </NavbarItem>
                 <NavbarItem>
-                <Link color="foreground" href="#">
+                <Link color="foreground" href="#" to='/about-us'>
                     About Us
                 </Link>
                 </NavbarItem>
                 <NavbarItem isActive>
-                <Link href="#" aria-current="page">
+                <Link href="#" aria-current="page" to='services'>
                     Services
                 </Link>
                 </NavbarItem>
                 <NavbarItem>
-                <Link color="foreground" href="#">
+                <Link color="foreground" href="#" to='pricing'>
                     Pricing
                 </Link>
                 </NavbarItem>
 
                 <NavbarItem>
-                <Link color="foreground" href="#">
+                <Link color="foreground" href="#" to='contact-us'>
                     Contact Us
                 </Link>
                 </NavbarItem>
@@ -83,13 +89,12 @@ export default function App() {
             <NavbarMenuItem key={`${item}-${index}`}>
                 <Link
                 className="w-full text-danger"
-                // color={
-                //     index === 2 ? "warning" : index === menuItems.length - 1 ? "danger" : "foreground"
-                // }
-                href="#"
+                
+                to={item.route}
                 size="lg"
+                onClick={handleClick}
                 >
-                {item}
+                {item.name}
                 </Link>
             </NavbarMenuItem>
             ))}
