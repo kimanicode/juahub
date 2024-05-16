@@ -35,40 +35,40 @@ export default function App() {
         <NavbarContent className="sm:hidden pr-3" justify="center">
             <NavbarBrand>
             
-            <Link to='/'><p className="font-bold text-inherit text-primary">JuaHub</p></Link>
+            <Link to='/'><p className="font-bold text-inherit text-primary">Jua<span className="text-secondary">Hub</span></p></Link>
             </NavbarBrand>
         </NavbarContent>
     
-        <NavbarContent className="hidden sm:flex gap-4" justify="end">
-            <Link to='/'> <p className="font-bold text-inherit text-primary">JuaHub</p>
+        <NavbarContent className="hidden sm:flex gap-4 text-gray-700 " justify="end">
+            <Link to='/'> <p className="font-bold text-inherit text-primary">Jua<span className="text-secondary">Hub</span></p>
 </Link>
             <NavbarBrand>
             
             </NavbarBrand>
         
                 <NavbarItem>
-                <Link color="foreground" href="#" to='/'>
+                <Link color="foreground"  to='/'  isActive  >
                     Home
                 </Link>
                 </NavbarItem>
                 <NavbarItem>
-                <Link color="foreground" href="#" to='/about-us'>
+                <Link color="foreground"  to='/about-us'>
                     About Us
                 </Link>
                 </NavbarItem>
-                <NavbarItem isActive>
-                <Link href="#" aria-current="page" to='services'>
+                <NavbarItem >
+                <Link  aria-current="page" to='services'>
                     Services
                 </Link>
                 </NavbarItem>
                 <NavbarItem>
-                <Link color="foreground" href="#" to='pricing'>
+                <Link color="foreground"  to='pricing'>
                     Pricing
                 </Link>
                 </NavbarItem>
 
                 <NavbarItem>
-                <Link color="foreground" href="#" to='contact-us'>
+                <Link color="foreground"  to='contact-us'>
                     Contact Us
                 </Link>
                 </NavbarItem>
@@ -78,7 +78,7 @@ export default function App() {
         {isMenuOpen && <NavbarContent justify="end">
             
             <NavbarItem>
-            <Button as={Link} color="primary" href="#" variant="flat">
+            <Button as={Link} color="primary"  variant="flat">
                 Get Started
             </Button>
             </NavbarItem>

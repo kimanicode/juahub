@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {Input,Textarea} from "@nextui-org/input";
-import {Button,DatePicker} from "@nextui-org/react";
-import {Select, SelectSection, SelectItem} from "@nextui-org/select";
+import {Button} from "@nextui-org/react";
+import {Select,  SelectItem} from "@nextui-org/select";
 
 
 const ConsultationForm = () => {
@@ -81,8 +81,8 @@ const ConsultationForm = () => {
 
       
 
-     <div className='flex  justify-between py-4 md:flex-row flex-col'>
-        <div className='basis-1/2'>
+     <div className='flex  justify-between py-4 md:flex-row flex-col '>
+        <div className='md:w-[45%]'>
 
             <Select 
                 id="contactMethod" 
@@ -106,11 +106,12 @@ const ConsultationForm = () => {
         
      </div>
 
-     <div className='py-5 md:w-1/2'>
+     <div className='py-5 md:w-[45%]'>
         <Textarea 
         id="projectDescription" 
         name="projectDescription" 
         label=" Project Description"
+        isRequired
         placeholder="Enter your description"
         value={formData.projectDescription} 
         onChange={handleChange} 
@@ -130,7 +131,7 @@ const ConsultationForm = () => {
       </div>
 
       <div className=' flex justify-center'>
-        <Button  className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg px-9 py-3" type='submit'>Request Consultation</Button>
+        <Button  className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg px-9 py-3" type='submit'>Request Quote</Button>
       </div>
     </form>
   );
