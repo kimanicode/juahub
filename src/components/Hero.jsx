@@ -2,6 +2,7 @@ import {Image,Button} from "@nextui-org/react";
 import banner from '../assets/banner.jpg'
 import { useNavigate} from 'react-router-dom'
 
+
 const Hero = () => {
     const navigate = useNavigate(); // Initialize useHistory hook
 

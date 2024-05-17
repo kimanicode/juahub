@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
@@ -24,11 +25,11 @@ const Footer = () => {
                 <div>
                     <p className="font-bold text-primary">Company</p>
                     <ul className="font-extralight py-3">
-                        <li>About Us</li>
-                        <li>Careers</li>
-                        <li>Team</li>
-                        <li>Pricing</li>
-                        <li>Contact Us</li>
+                        <li><Link to='/about-us'>About Us</Link></li>
+                        <li><Link to='/careers'>Careers</Link></li>
+                        <li><Link to='/team'>Team</Link></li>
+                        <li><Link to='/pricing'>Pricing</Link></li>
+                        <li><Link to='contact-us'>Contact Us</Link></li>
                     </ul>
                 </div>
 
