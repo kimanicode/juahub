@@ -1,14 +1,21 @@
 import React from "react";
 import {Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, NavbarContent, NavbarItem,  Button} from "@nextui-org/react";
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+
 
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const navigate = useNavigate();
 
   const handleClick =() =>{
     setIsMenuOpen(false)
   }
+  const handleGetStartedClick = () => {
+    // Navigate to the page where users can request a consultation 
+    navigate('/consultation');
+    handleClick()
+  };
 
   const menuItems = [
     { name: 'Home', route: '/' },
@@ -78,7 +85,7 @@ export default function App() {
         {isMenuOpen && <NavbarContent justify="end">
             
             <NavbarItem>
-            <Button as={Link} color="primary"  variant="flat">
+            <Button  color="primary"  variant="flat" onClick={handleGetStartedClick}>
                 Get Started
             </Button>
             </NavbarItem>
