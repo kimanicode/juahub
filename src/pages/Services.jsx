@@ -1,30 +1,41 @@
-import React from 'react';
+import { Card, } from '@nextui-org/react';
+import { Globe, Smartphone, CreditCard, Cloud, Code, Settings,  PieChart,  Book, Heart,  User } from 'lucide-react';
+
+const services = [
+  { title: 'Web Development', description: 'Custom Website Design, E-commerce Solutions, CMS, PWA, Maintenance and Support' , icon:Globe},
+  { title: 'Mobile App Development', description: 'Native and Cross-Platform Apps, UI/UX Design, Testing and QA, Maintenance', icon :Smartphone },
+  { title: 'Fintech Solutions', description: 'Mobile Money Integration, Digital Wallets, Payment Gateways, Blockchain Solutions',icon:CreditCard },
+  { title: 'Cloud Services', description: 'Infrastructure Setup, Cloud Migration, Security Solutions, Storage Solutions' ,icon:Cloud },
+  { title: 'Software Development', description: 'Custom Software, Enterprise Solutions, Testing and QA, API Development',icon:Code },
+  { title: 'IT Consulting and Strategy', description: 'IT Strategy, Digital Transformation, Risk Management, Infrastructure Consulting',icon:Settings },
+  { title: 'Data Analytics and AI', description: 'Data Management, Business Intelligence, Machine Learning, Data Visualization',icon:PieChart },
+  { title: 'E-Learning Solutions', description: 'Platform Development, Learning Management Systems, Online Courses, Virtual Classrooms',icon:Book },
+  { title: 'HealthTech Solutions', description: 'Telemedicine Platforms, Electronic Health Records, Health Information Systems, Patient Management',icon:Heart },
+  { title: 'Tech Training and Workshops', description: 'Digital Skills Training,Corporate IT Training',icon:User },
+  {title: 'Hosting Services',  description: 'Web Hosting, Cloud Hosting, VPS Hosting, Dedicated Servers, Managed Hosting, Domain Registration',  icon: Cloud,}
+];
 
 const Services = () => {
   return (
-    <div className="bg-gray-100 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-primary sm:text-4xl">Our Services</h2>
-          <p className="mt-4 text-lg text-gray-500">Empowering businesses with cutting-edge technology solutions.</p>
-        </div>
-        <div className="mt-20 flex flex-wrap justify-center gap-6">
-          <div className="bg-white rounded-lg shadow p-6 w-80">
-            <h3 className="text-xl font-medium text-danger">Digital Transformation Solutions</h3>
-            <p className="mt-2 text-base text-gray-500">Comprehensive solutions to modernize your operations, streamline processes, and enhance efficiency.</p>
-          </div>
-          <div className="bg-white rounded-lg shadow p-6 w-80">
-            <h3 className="text-xl font-medium text-danger">Custom Software Development</h3>
-            <p className="mt-2 text-base text-gray-500">Tailored software solutions to meet your unique business needs, from web and mobile applications to enterprise software.</p>
-          </div>
-          <div className="bg-white rounded-lg shadow p-6 w-80">
-            <h3 className="text-xl font-medium text-danger">Strategic IT Consulting</h3>
-            <p className="mt-2 text-base text-gray-500">Expert guidance and advisory support to navigate the complex landscape of technology and optimize your IT infrastructure.</p>
-          </div>
+    <div className="py-10 bg-gray-100">
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-3xl font-semibold text-center mb-8 text-primary">Our Services</h2>
+        <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
+          {services.map((service, index) => (
+            
+            <Card key={index} className="shadow-lg p-5 text-center hover:bg-slate-100 bg-slate-200">
+              <div className='flex justify-center'>
+               <service.icon className="h-9 w-9 text-secondary mb-2" />
+              </div>
+              <p className="text-primary font-semibold py-2" >{service.title}</p>
+              
+              <p className='text-gray-500'>{service.description}</p>
+            </Card>
+          ))}
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Services;

@@ -121,7 +121,7 @@ const ConsultationForm = () => {
         </div>
         <div className='flex justify-center'>
           <Button className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg px-9 py-3" type='submit'>
-            Request Quote
+            Get Quote
           </Button>
         </div>
       </form>

@@ -64,18 +64,18 @@ export default function App() {
                 </Link>
                 </NavbarItem>
                 <NavbarItem >
-                <Link  aria-current="page" to='services'>
+                <Link  aria-current="page" to='/services'>
                     Services
                 </Link>
                 </NavbarItem>
                 <NavbarItem>
-                <Link color="foreground"  to='pricing'>
+                <Link color="foreground"  to='/pricing'>
                     Pricing
                 </Link>
                 </NavbarItem>
 
                 <NavbarItem>
-                <Link color="foreground"  to='contact-us'>
+                <Link color="foreground"  to='/contact-us'>
                     Contact Us
                 </Link>
                 </NavbarItem>
