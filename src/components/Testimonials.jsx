@@ -1,12 +1,16 @@
-import React from 'react';
-  import { Image } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
 import banner from '../assets/davy.jpg';
 import wangui from '../assets/wangui.jpg';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
 const Testimonials = () => {
+
+ 
+
+
   const settings = {
     dots: true,
     infinite: true,

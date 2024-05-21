@@ -37,7 +37,7 @@ const ServicesCard = () => {
             <p className="text-sky-500"> <Speech /></p>
             <p className="font-semibold py-2 text-danger text-center ">IT Consulting</p>
             <span className="font-extralight py-2">We provide strategic IT consulting services, guiding businesses through technology decisions and helping them leverage IT to achieve their business objectives.</span>
-            <Button radius="none" color="primary">
+            <Button radius="none" color="primary" >
                 Learn More
             </Button>  
                 

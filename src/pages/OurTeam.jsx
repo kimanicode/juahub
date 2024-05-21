@@ -1,4 +1,3 @@
-import React from 'react';
 import kim from '../assets/kim.jpeg';
 import bernard from '../assets/bernard.jpg';
 import { Image } from "@nextui-org/react";
@@ -30,16 +29,16 @@ const OurTeam = () => {
       <div className="max-w-6xl mx-auto px-4 flex flex-wrap justify-center">
         <h2 className="text-3xl font-semibold text-center mb-8 w-full text-white">Our Team</h2>
         {teamMembers.map((member, index) => (
-          <div key={index} className="flex flex-col items-center justify-center mb-8 mx-4  shadow-2xl p-5 rounded-xl text-center bg-white">
+          <div key={index} className="flex flex-col items-center justify-center mb-8 mx-4  shadow-2xl p-5 rounded-xl text-center bg-white hover:bg-white/90">
             <Image src={member.image} alt={member.name} isBlurred className="w-28 h-28 md:w-48 md:h-48 rounded-full mb-4 bg-gray-100" />
             <h3 className="text-lg font-semibold text-primary py-2">{member.name}</h3>
             <p className="text-sm text-gray-600">{member.role}</p>
             <div className='w-full h-[1px] bg-primary my-2'></div>
-            <div className='flex gap-2 py-2'>
-              <Instagram size={18} />
-              <Facebook size={18} />
-              <Twitter size={18} />
-              <Linkedin size={18}/>
+            <div className='flex gap-2 py-2 text-gray-200'>
+              <div className='p-2 bg-gradient-to-r from-primary/50 to-secondary/50 rounded-full'><Instagram size={18} /></div>
+              <div className='p-2 bg-gradient-to-r from-primary/50 to-secondary/50 rounded-full'><Facebook size={18} /></div>
+              <div className='p-2 bg-gradient-to-r from-primary/50 to-secondary/50 rounded-full'><Twitter size={18} /></div>
+              <div className='p-2 bg-gradient-to-r from-primary/50 to-secondary/50 rounded-full'><Linkedin size={18}/></div>
 
             </div>
           </div>

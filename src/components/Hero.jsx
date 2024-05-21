@@ -9,7 +9,10 @@ const Hero = () => {
     const handleGetStartedClick = () => {
       // Navigate to the page where users can request a consultation or fill out a contact form
       navigate('/consultation');
-    };
+    }
+     
+    
+  
   
     const handleLearnMoreClick = () => {
       // Navigate to the page where users can learn more about your services

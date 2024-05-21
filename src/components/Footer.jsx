@@ -12,10 +12,10 @@ const Footer = () => {
                      JuaHub is a forward-thinking technology company <br />dedicated to delivering innovative solutions that drive <br /> business growth and efficiency.
                 </span>
                 <div className="flex gap-3 py-3 text-primary">
-                    <Linkedin/>
-                    <Twitter/>
-                    <Facebook/>
-                    <Instagram/>     
+                    <div className="p-2 bg-gradient-to-r from-white to-gray-400 rounded-full"> <Linkedin/></div>
+                    <div className="p-2 bg-gradient-to-r from-white to-gray-400 rounded-full"> <Twitter/></div>
+                    <div className="p-2 bg-gradient-to-r from-white to-gray-400 rounded-full"> <Facebook/></div>
+                    <div className="p-2 bg-gradient-to-r from-white to-gray-400 rounded-full"> <Instagram/></div>  
 
                 </div>
     

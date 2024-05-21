@@ -95,7 +95,7 @@ export default function App() {
             {menuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
                 <Link
-                className="w-full text-danger"
+                className="w-full text-secondary py-5 px-3 font-medium"
                 
                 to={item.route}
                 size="lg"
