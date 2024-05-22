@@ -1,7 +1,10 @@
 import kim from '../assets/kim.jpeg';
 import bernard from '../assets/bernard.jpg';
 import { Image } from "@nextui-org/react";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
+import { Facebook, Instagram, Linkedin,  } from "lucide-react"
+import Xicon from '../assets/twitter.png'
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -34,11 +37,11 @@ const OurTeam = () => {
             <h3 className="text-lg font-semibold text-primary py-2">{member.name}</h3>
             <p className="text-sm text-gray-600">{member.role}</p>
             <div className='w-full h-[1px] bg-primary my-2'></div>
-            <div className='flex gap-2 py-2 text-gray-200'>
-              <div className='p-2 bg-gradient-to-r from-primary/50 to-secondary/50 rounded-full'><Instagram size={18} /></div>
-              <div className='p-2 bg-gradient-to-r from-primary/50 to-secondary/50 rounded-full'><Facebook size={18} /></div>
-              <div className='p-2 bg-gradient-to-r from-primary/50 to-secondary/50 rounded-full'><Twitter size={18} /></div>
-              <div className='p-2 bg-gradient-to-r from-primary/50 to-secondary/50 rounded-full'><Linkedin size={18}/></div>
+            <div className='flex gap-2 py-2 text- items-center'>
+              <div className='p-2 bg-gradient-to-r from-white to-gray-400 rounded-full'><Instagram size={18} /></div>
+              <div className='p-2 bg-gradient-to-r from-white to-gray-400 rounded-full'><Facebook size={18} /></div>
+              <div className='p-2 bg-gradient-to-r from-white to-gray-400 rounded-full'><Image src={Xicon} className='h-[18px] w-[18px]' /></div>
+              <div className='p-2 bg-gradient-to-r from-white to-gray-400 rounded-full'><Linkedin size={18}/></div>
 
             </div>
           </div>

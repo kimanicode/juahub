@@ -1,5 +1,7 @@
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
 import { Link } from "react-router-dom"
+import Xicon from '../assets/twitter.png'
+import { Image } from "@nextui-org/image"
 
 const Footer = () => {
   return (
@@ -11,9 +13,9 @@ const Footer = () => {
                 <span className="font-extralight py-6">
                      JuaHub is a forward-thinking technology company <br />dedicated to delivering innovative solutions that drive <br /> business growth and efficiency.
                 </span>
-                <div className="flex gap-3 py-3 text-primary">
+                <div className="flex gap-3 py-3 text-black">
                     <div className="p-2 bg-gradient-to-r from-white to-gray-400 rounded-full"> <Linkedin/></div>
-                    <div className="p-2 bg-gradient-to-r from-white to-gray-400 rounded-full"> <Twitter/></div>
+                    <div className="p-2 bg-gradient-to-r from-white to-gray-400 rounded-full"> <Image src={Xicon} className=""/></div>
                     <div className="p-2 bg-gradient-to-r from-white to-gray-400 rounded-full"> <Facebook/></div>
                     <div className="p-2 bg-gradient-to-r from-white to-gray-400 rounded-full"> <Instagram/></div>  
 
