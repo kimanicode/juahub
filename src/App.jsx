@@ -14,16 +14,19 @@ import ConsultationForm from './pages/ConsultationForm'
 import OurTeam from './pages/OurTeam'
 import Pricing from './pages/Pricing'
 import Careers from './pages/Careers'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
  
   return (
    <Router>
+    <ScrollToTop />
 
     <div>
         <Navbar/>
         
         <Routes>
+          
             <Route path='/'>
               <Route path='/' element={
                   <>     
