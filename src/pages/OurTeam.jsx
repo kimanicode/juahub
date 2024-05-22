@@ -26,7 +26,7 @@ const OurTeam = () => {
          </p>
 
       </div>
-      <div className="max-w-6xl mx-auto px-4 flex flex-wrap justify-center">
+      <div className="w-full mx-auto px-4 flex flex-wrap justify-center">
         <h2 className="text-3xl font-semibold text-center mb-8 w-full text-white">Our Team</h2>
         {teamMembers.map((member, index) => (
           <div key={index} className="flex flex-col items-center justify-center mb-8 mx-4  shadow-2xl p-5 rounded-xl text-center bg-white hover:bg-white/90">

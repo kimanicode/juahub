@@ -58,12 +58,12 @@ const Pricing = () => {
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl text-primary font-semibold text-center mb-8">Our Pricing Plans</h2>
         
-          <div className='flex gap-2 justify-center md:flex-row flex-col md:w-full' >
+          <div className='flex gap-4 justify-center md:flex-row flex-col md:w-full' >
           {plans.map((plan, index) => (
-            <div key={index} className='basis-1/4'>
-              <Card className="shadow-lg p-6 rounded-lg bg-slate-300 hover:bg-slate-200">
-                <p className="text-center mb-4">{plan.title}</p>
-                <p className="text-primary text-center mb-4">
+            <div key={index} className='basis-1/4 m-3 '>
+              <Card className="shadow-lg p-6 rounded-lg bg-slate-300 flex justify-center items-center hover:bg-slate-200">
+                <p className="text-center mb-4 font-extralight ">{plan.title}</p>
+                <p className="text-primary text-center mb-4 font-bold">
                   {plan.price}
                 </p>
                 <ul className="list-none space-y-2">
@@ -77,7 +77,7 @@ const Pricing = () => {
                 <Button
                   color={plan.buttonColor}
                   css={{ width: '100%' }}
-                  className="mt-4"
+                  className="mt-4 w-2/3"
                   onClick ={handleGetStartedClick}
                 >
                   {plan.buttonText}

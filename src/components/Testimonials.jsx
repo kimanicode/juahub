@@ -16,7 +16,8 @@ const Testimonials = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,  // Adjusted to show one testimonial at a time for better readability
-    slidesToScroll: 1
+    slidesToScroll: 1,
+   
   };
 
   const testimonials = [

@@ -13,6 +13,7 @@ import Contact from'./pages/Contact'
 import ConsultationForm from './pages/ConsultationForm'
 import OurTeam from './pages/OurTeam'
 import Pricing from './pages/Pricing'
+import Careers from './pages/Careers'
 
 function App() {
  
@@ -39,6 +40,7 @@ function App() {
             <Route path='/consultation' element={<ConsultationForm />} />
             <Route path='/team' element={<OurTeam />} />
             <Route path='/pricing' element={<Pricing />} />
+            <Route path='/careers' element={<Careers />} />
             </Routes>
 
         
